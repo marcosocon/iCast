@@ -7,19 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B11FC6EF2539093E0011855D /* MusicPlayerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11FC6EE2539093E0011855D /* MusicPlayerApp.swift */; };
+		B11FC6EF2539093E0011855D /* iCastApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11FC6EE2539093E0011855D /* iCastApp.swift */; };
 		B11FC6F12539093E0011855D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11FC6F02539093E0011855D /* ContentView.swift */; };
 		B11FC6F32539093F0011855D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B11FC6F22539093F0011855D /* Assets.xcassets */; };
 		B11FC6F62539093F0011855D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B11FC6F52539093F0011855D /* Preview Assets.xcassets */; };
+		B121F42C2543F157000D184B /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = B121F42B2543F157000D184B /* Api.swift */; };
+		B1CF646E254A31FA0003BE04 /* UrlImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CF646D254A31FA0003BE04 /* UrlImageView.swift */; };
+		B1CF6471254A32DC0003BE04 /* UrlImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CF6470254A32DC0003BE04 /* UrlImageModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B11FC6EB2539093E0011855D /* MusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B11FC6EE2539093E0011855D /* MusicPlayerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerApp.swift; sourceTree = "<group>"; };
+		B11FC6EB2539093E0011855D /* iCast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCast.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B11FC6EE2539093E0011855D /* iCastApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCastApp.swift; sourceTree = "<group>"; };
 		B11FC6F02539093E0011855D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B11FC6F22539093F0011855D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B11FC6F52539093F0011855D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		B11FC6F72539093F0011855D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B121F42B2543F157000D184B /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		B198D382254A378E00CAB802 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1CF646D254A31FA0003BE04 /* UrlImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlImageView.swift; sourceTree = "<group>"; };
+		B1CF6470254A32DC0003BE04 /* UrlImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlImageModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,7 +42,7 @@
 		B11FC6E22539093E0011855D = {
 			isa = PBXGroup;
 			children = (
-				B11FC6ED2539093E0011855D /* MusicPlayer */,
+				B11FC6ED2539093E0011855D /* iCast */,
 				B11FC6EC2539093E0011855D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,21 +50,24 @@
 		B11FC6EC2539093E0011855D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B11FC6EB2539093E0011855D /* MusicPlayer.app */,
+				B11FC6EB2539093E0011855D /* iCast.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B11FC6ED2539093E0011855D /* MusicPlayer */ = {
+		B11FC6ED2539093E0011855D /* iCast */ = {
 			isa = PBXGroup;
 			children = (
-				B11FC6EE2539093E0011855D /* MusicPlayerApp.swift */,
+				B198D382254A378E00CAB802 /* Info.plist */,
+				B1CF6475254A34610003BE04 /* View */,
+				B1CF6474254A34560003BE04 /* Model */,
+				B11FC6EE2539093E0011855D /* iCastApp.swift */,
 				B11FC6F02539093E0011855D /* ContentView.swift */,
 				B11FC6F22539093F0011855D /* Assets.xcassets */,
-				B11FC6F72539093F0011855D /* Info.plist */,
 				B11FC6F42539093F0011855D /* Preview Content */,
+				B121F42B2543F157000D184B /* Api.swift */,
 			);
-			path = MusicPlayer;
+			path = iCast;
 			sourceTree = "<group>";
 		};
 		B11FC6F42539093F0011855D /* Preview Content */ = {
@@ -69,12 +78,28 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		B1CF6474254A34560003BE04 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B1CF6470254A32DC0003BE04 /* UrlImageModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B1CF6475254A34610003BE04 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B1CF646D254A31FA0003BE04 /* UrlImageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B11FC6EA2539093E0011855D /* MusicPlayer */ = {
+		B11FC6EA2539093E0011855D /* iCast */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B11FC6FA2539093F0011855D /* Build configuration list for PBXNativeTarget "MusicPlayer" */;
+			buildConfigurationList = B11FC6FA2539093F0011855D /* Build configuration list for PBXNativeTarget "iCast" */;
 			buildPhases = (
 				B11FC6E72539093E0011855D /* Sources */,
 				B11FC6E82539093E0011855D /* Frameworks */,
@@ -84,9 +109,9 @@
 			);
 			dependencies = (
 			);
-			name = MusicPlayer;
+			name = iCast;
 			productName = MusicPlayer;
-			productReference = B11FC6EB2539093E0011855D /* MusicPlayer.app */;
+			productReference = B11FC6EB2539093E0011855D /* iCast.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -103,7 +128,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B11FC6E62539093E0011855D /* Build configuration list for PBXProject "MusicPlayer" */;
+			buildConfigurationList = B11FC6E62539093E0011855D /* Build configuration list for PBXProject "iCast" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -116,7 +141,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B11FC6EA2539093E0011855D /* MusicPlayer */,
+				B11FC6EA2539093E0011855D /* iCast */,
 			);
 		};
 /* End PBXProject section */
@@ -138,8 +163,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1CF646E254A31FA0003BE04 /* UrlImageView.swift in Sources */,
+				B1CF6471254A32DC0003BE04 /* UrlImageModel.swift in Sources */,
+				B121F42C2543F157000D184B /* Api.swift in Sources */,
 				B11FC6F12539093E0011855D /* ContentView.swift in Sources */,
-				B11FC6EF2539093E0011855D /* MusicPlayerApp.swift in Sources */,
+				B11FC6EF2539093E0011855D /* iCastApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,19 +293,18 @@
 		B11FC6FB2539093F0011855D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"MusicPlayer/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"iCast/Preview Content\"";
 				DEVELOPMENT_TEAM = LE3Q4TFXRR;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = MusicPlayer/Info.plist;
+				INFOPLIST_FILE = iCast/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.develative.MusicPlayer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.develative.iCast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -287,19 +314,18 @@
 		B11FC6FC2539093F0011855D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"MusicPlayer/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"iCast/Preview Content\"";
 				DEVELOPMENT_TEAM = LE3Q4TFXRR;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = MusicPlayer/Info.plist;
+				INFOPLIST_FILE = iCast/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.develative.MusicPlayer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.develative.iCast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -309,7 +335,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B11FC6E62539093E0011855D /* Build configuration list for PBXProject "MusicPlayer" */ = {
+		B11FC6E62539093E0011855D /* Build configuration list for PBXProject "iCast" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B11FC6F82539093F0011855D /* Debug */,
@@ -318,7 +344,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B11FC6FA2539093F0011855D /* Build configuration list for PBXNativeTarget "MusicPlayer" */ = {
+		B11FC6FA2539093F0011855D /* Build configuration list for PBXNativeTarget "iCast" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B11FC6FB2539093F0011855D /* Debug */,
