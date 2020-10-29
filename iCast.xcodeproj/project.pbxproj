@@ -8,10 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		B11FC6EF2539093E0011855D /* iCastApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11FC6EE2539093E0011855D /* iCastApp.swift */; };
-		B11FC6F12539093E0011855D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11FC6F02539093E0011855D /* ContentView.swift */; };
+		B11FC6F12539093E0011855D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11FC6F02539093E0011855D /* HomeView.swift */; };
 		B11FC6F32539093F0011855D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B11FC6F22539093F0011855D /* Assets.xcassets */; };
 		B11FC6F62539093F0011855D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B11FC6F52539093F0011855D /* Preview Assets.xcassets */; };
 		B121F42C2543F157000D184B /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = B121F42B2543F157000D184B /* Api.swift */; };
+		B1560DEB254A3E220037C065 /* PodcastsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1560DEA254A3E220037C065 /* PodcastsScreenView.swift */; };
+		B1560DEF254A3EB30037C065 /* PodcastGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1560DEE254A3EB30037C065 /* PodcastGroupView.swift */; };
+		B1560DF3254A3EFD0037C065 /* PodcastDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1560DF2254A3EFD0037C065 /* PodcastDetailView.swift */; };
+		B1560DF6254A3F490037C065 /* PodcastItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1560DF5254A3F490037C065 /* PodcastItemView.swift */; };
 		B1CF646E254A31FA0003BE04 /* UrlImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CF646D254A31FA0003BE04 /* UrlImageView.swift */; };
 		B1CF6471254A32DC0003BE04 /* UrlImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CF6470254A32DC0003BE04 /* UrlImageModel.swift */; };
 /* End PBXBuildFile section */
@@ -19,10 +23,14 @@
 /* Begin PBXFileReference section */
 		B11FC6EB2539093E0011855D /* iCast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B11FC6EE2539093E0011855D /* iCastApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCastApp.swift; sourceTree = "<group>"; };
-		B11FC6F02539093E0011855D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B11FC6F02539093E0011855D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		B11FC6F22539093F0011855D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B11FC6F52539093F0011855D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B121F42B2543F157000D184B /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		B1560DEA254A3E220037C065 /* PodcastsScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastsScreenView.swift; sourceTree = "<group>"; };
+		B1560DEE254A3EB30037C065 /* PodcastGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastGroupView.swift; sourceTree = "<group>"; };
+		B1560DF2254A3EFD0037C065 /* PodcastDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastDetailView.swift; sourceTree = "<group>"; };
+		B1560DF5254A3F490037C065 /* PodcastItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastItemView.swift; sourceTree = "<group>"; };
 		B198D382254A378E00CAB802 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1CF646D254A31FA0003BE04 /* UrlImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlImageView.swift; sourceTree = "<group>"; };
 		B1CF6470254A32DC0003BE04 /* UrlImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlImageModel.swift; sourceTree = "<group>"; };
@@ -58,14 +66,13 @@
 		B11FC6ED2539093E0011855D /* iCast */ = {
 			isa = PBXGroup;
 			children = (
-				B198D382254A378E00CAB802 /* Info.plist */,
 				B1CF6475254A34610003BE04 /* View */,
 				B1CF6474254A34560003BE04 /* Model */,
 				B11FC6EE2539093E0011855D /* iCastApp.swift */,
-				B11FC6F02539093E0011855D /* ContentView.swift */,
 				B11FC6F22539093F0011855D /* Assets.xcassets */,
 				B11FC6F42539093F0011855D /* Preview Content */,
 				B121F42B2543F157000D184B /* Api.swift */,
+				B198D382254A378E00CAB802 /* Info.plist */,
 			);
 			path = iCast;
 			sourceTree = "<group>";
@@ -76,6 +83,16 @@
 				B11FC6F52539093F0011855D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B1560DED254A3E6D0037C065 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B1CF646D254A31FA0003BE04 /* UrlImageView.swift */,
+				B1560DEE254A3EB30037C065 /* PodcastGroupView.swift */,
+				B1560DF5254A3F490037C065 /* PodcastItemView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		B1CF6474254A34560003BE04 /* Model */ = {
@@ -89,7 +106,10 @@
 		B1CF6475254A34610003BE04 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B1CF646D254A31FA0003BE04 /* UrlImageView.swift */,
+				B1560DED254A3E6D0037C065 /* Components */,
+				B11FC6F02539093E0011855D /* HomeView.swift */,
+				B1560DEA254A3E220037C065 /* PodcastsScreenView.swift */,
+				B1560DF2254A3EFD0037C065 /* PodcastDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -164,9 +184,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1CF646E254A31FA0003BE04 /* UrlImageView.swift in Sources */,
+				B1560DEB254A3E220037C065 /* PodcastsScreenView.swift in Sources */,
 				B1CF6471254A32DC0003BE04 /* UrlImageModel.swift in Sources */,
 				B121F42C2543F157000D184B /* Api.swift in Sources */,
-				B11FC6F12539093E0011855D /* ContentView.swift in Sources */,
+				B11FC6F12539093E0011855D /* HomeView.swift in Sources */,
+				B1560DEF254A3EB30037C065 /* PodcastGroupView.swift in Sources */,
+				B1560DF6254A3F490037C065 /* PodcastItemView.swift in Sources */,
+				B1560DF3254A3EFD0037C065 /* PodcastDetailView.swift in Sources */,
 				B11FC6EF2539093E0011855D /* iCastApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
