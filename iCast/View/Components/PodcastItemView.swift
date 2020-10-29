@@ -11,7 +11,7 @@ import SwiftUI
 struct PodcastItemView: View {
     var podcast: Podcast
     var body: some View {
-        NavigationLink(destination: PodcastDetailView()) {
+        NavigationLink(destination: PodcastDetailView(podcast: podcast)) {
             VStack() {
                 UrlImageView(urlString: podcast.thumbnail)
                 Text(podcast.title_original).font(.footnote)

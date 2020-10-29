@@ -9,7 +9,8 @@ import SwiftUI
 
 // Podcasts Screen Page
 struct PodcastsScreenView: View {
-    var podcasts: [Podcast]
+    @ObservedObject var viewModel = PodcastsScreenViewModel()
+    
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
@@ -17,11 +18,16 @@ struct PodcastsScreenView: View {
                     .font(.title)
                     .bold()
                     .padding(.bottom)
-                PodcastGroupView(title: "Trending Now", podcasts: self.podcasts)
-                PodcastGroupView(title: "Most Popular", podcasts: self.podcasts)
-                PodcastGroupView(title: "Selected For You", podcasts: self.podcasts)
+                PodcastGroupView(title: "Trending Now", podcasts: viewModel.podcasts)
+                PodcastGroupView(title: "Most Popular", podcasts: viewModel.podcasts)
+                PodcastGroupView(title: "Selected For You", podcasts: viewModel.podcasts)
                 Spacer()
-            }.padding(.leading)
-        }
+            }
+            .padding(.leading)
+        }.onAppear(perform: {
+            Api().getPodcasts { (podcasts) in
+                viewModel.podcasts = podcasts!
+            }
+        })
     }
 }

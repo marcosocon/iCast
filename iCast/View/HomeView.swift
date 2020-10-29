@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct HomeView: View {
-    @State var podcasts: [Podcast] = []
+        
     var body: some View {
         NavigationView {
             TabView {
-                PodcastsScreenView(podcasts: self.podcasts).tabItem {
+                PodcastsScreenView().tabItem {
                     Image(systemName: "book")
                     Text("Podcasts")
                 }
@@ -28,11 +28,7 @@ struct HomeView: View {
                 }.animation(.easeIn)
 
             }
-        }.onAppear(perform: {
-            Api().getPodcasts { (podcasts) in
-                self.podcasts = podcasts!
-            }
-        })
+        }
     }
 }
 

@@ -39,7 +39,7 @@ struct SearchPodcastsResponse: Decodable {
 
 class Api {
     func getPodcasts(completion: @escaping ([Podcast]?) -> ()) {
-        guard let url = URL(string: "https://listen-api.listennotes.com/api/v2/search?q=the%20groundup%20show&sort_by_date=0&type=podcast") else { return }
+        guard let url = URL(string: "https://listen-api.listennotes.com/api/v2/search?q=the%20groun&sort_by_date=0&type=podcast") else { return }
         var request = URLRequest(url: url)
         request.allHTTPHeaderFields = [
           "Content-Type": "application/json",
@@ -47,7 +47,6 @@ class Api {
         ]
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             let response = try! JSONDecoder().decode(SearchPodcastsResponse.self, from: data!)
-            print(response.results)
             DispatchQueue.main.async {
                 completion(response.results)
             }
