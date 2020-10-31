@@ -25,9 +25,7 @@ struct PodcastsScreenView: View {
             }
             .padding(.leading)
         }.onAppear(perform: {
-            Api().getPodcasts { (podcasts) in
-                viewModel.podcasts = podcasts!
-            }
+            viewModel.getPodcasts()
         })
     }
 }

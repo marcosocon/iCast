@@ -29,7 +29,23 @@ struct Podcast: Decodable, Identifiable {
     var website: String
 }
 
-struct SearchPodcastsResponse: Decodable {
+struct Episode: Decodable, Identifiable {
+    var id: String
+    var link: String
+    var audio: String
+    var image: String
+    var title: String
+    var thumbnail: String
+    var description: String
+    var pub_date_ms: Int
+    var listennotes_url:String
+    var audio_length_sec:Int
+    var explicit_content:Bool
+    var maybe_audio_invalid:Bool
+    var listennotes_edit_url: String
+}
+
+struct GetPodcastsResponse: Decodable {
     var count: Int
     var next_offset: Int
     var results: Array<Podcast>
@@ -37,20 +53,39 @@ struct SearchPodcastsResponse: Decodable {
     var total: Int
 }
 
+struct GetEpisodesResponse: Decodable {
+    var id: String
+    var title: String
+    var episodes: Array<Episode>
+}
+
 class Api {
+    private var headers  = [
+        "Content-Type": "application/json",
+        "X-ListenAPI-Key": "ac3b5347a0dc43b1965f55d187a2a134"
+      ]
     func getPodcasts(completion: @escaping ([Podcast]?) -> ()) {
         guard let url = URL(string: "https://listen-api.listennotes.com/api/v2/search?q=the%20groun&sort_by_date=0&type=podcast") else { return }
         var request = URLRequest(url: url)
-        request.allHTTPHeaderFields = [
-          "Content-Type": "application/json",
-          "X-ListenAPI-Key": "ac3b5347a0dc43b1965f55d187a2a134"
-        ]
+        request.allHTTPHeaderFields = headers
         URLSession.shared.dataTask(with: request) { (data, response, error) in
-            let response = try! JSONDecoder().decode(SearchPodcastsResponse.self, from: data!)
+            let response = try! JSONDecoder().decode(GetPodcastsResponse.self, from: data!)
             DispatchQueue.main.async {
                 completion(response.results)
             }
-            
+        }.resume()
+    }
+    
+    func getEpisodesForPodcast(id: String, completion: @escaping ([Episode]?) -> ()) {
+        guard let url = URL(string: "https://listen-api.listennotes.com/api/v2/podcasts/" + id) else { return }
+        var request = URLRequest(url: url)
+        request.allHTTPHeaderFields = headers
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            let response = try! JSONDecoder().decode(GetEpisodesResponse.self, from: data!)
+            print(response.episodes)
+            DispatchQueue.main.async {
+                completion(response.episodes)
+            }
         }.resume()
     }
 }

@@ -9,4 +9,11 @@ import Foundation
 
 final class PodcastsScreenViewModel: ObservableObject {
     @Published var podcasts: [Podcast] = []
+    
+    public func getPodcasts() {
+        let api = Api();
+        api.getPodcasts { (podcasts) in
+            self.podcasts = podcasts!
+        }
+    }
 }

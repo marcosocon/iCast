@@ -19,6 +19,8 @@
 		B1768EC1254A6ED500BC377A /* PodcastsScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1768EC0254A6ED500BC377A /* PodcastsScreenViewModel.swift */; };
 		B1CF646E254A31FA0003BE04 /* UrlImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CF646D254A31FA0003BE04 /* UrlImageView.swift */; };
 		B1CF6471254A32DC0003BE04 /* UrlImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CF6470254A32DC0003BE04 /* UrlImageModel.swift */; };
+		B1E39287254CFD2000A19F7F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1E39286254CFD2000A19F7F /* AVFoundation.framework */; };
+		B1E39291254D048300A19F7F /* sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B1E39290254D048300A19F7F /* sound.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,9 @@
 		B198D382254A378E00CAB802 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1CF646D254A31FA0003BE04 /* UrlImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlImageView.swift; sourceTree = "<group>"; };
 		B1CF6470254A32DC0003BE04 /* UrlImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlImageModel.swift; sourceTree = "<group>"; };
+		B1E39286254CFD2000A19F7F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B1E39289254D03C500A19F7F /* sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sound.mp3; path = ../../../Downloads/sound.mp3; sourceTree = "<group>"; };
+		B1E39290254D048300A19F7F /* sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sound.mp3; path = iCast/sound.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1E39287254CFD2000A19F7F /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,8 +58,10 @@
 		B11FC6E22539093E0011855D = {
 			isa = PBXGroup;
 			children = (
+				B1E39290254D048300A19F7F /* sound.mp3 */,
 				B11FC6ED2539093E0011855D /* iCast */,
 				B11FC6EC2539093E0011855D /* Products */,
+				B1E39285254CFD2000A19F7F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,6 +125,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		B1E39285254CFD2000A19F7F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B1E39289254D03C500A19F7F /* sound.mp3 */,
+				B1E39286254CFD2000A19F7F /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -174,6 +191,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1E39291254D048300A19F7F /* sound.mp3 in Resources */,
 				B11FC6F62539093F0011855D /* Preview Assets.xcassets in Resources */,
 				B11FC6F32539093F0011855D /* Assets.xcassets in Resources */,
 			);

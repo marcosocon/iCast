@@ -6,25 +6,41 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 // Podcast Detail Page
 struct PodcastDetailView: View {
+    @State var episodes: [Episode] = []
     
     var podcast: Podcast
     var body: some View {
-        VStack {
-            Text(podcast.title_original).font(.title)
-            UrlImageView(urlString: podcast.thumbnail)
-            HStack {
-                Button("Play", action: {
-                    
-                })
-                Button("Pause", action: {
-                    
-                })
+        NavigationView {
+            VStack {
+                Text(podcast.title_original).font(.title)
+                UrlImageView(urlString: podcast.thumbnail)
 
+                ForEach(episodes) { episode in
+                    EpisodeListItem(episode: episode)
+                }
+
+            }.padding()
+        }.onAppear(perform: {
+            Api().getEpisodesForPodcast(id: podcast.id) { (episodes) in
+                self.episodes = episodes!
             }
-        }.padding()
+        })
+    }
+}
+
+struct EpisodeListItem: View {
+    var episode: Episode
+    var body: some View {
+        HStack {
+            Text(episode.title)
+            Button("Play", action: {
+                print("Click on play")
+            })
+        }
     }
 }
 
